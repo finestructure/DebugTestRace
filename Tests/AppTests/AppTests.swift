@@ -7,10 +7,21 @@ import XCTVapor
 
 
 enum Variants {
+    // Triggers
+    // Assertion failed: PostgresConnection deinitialized before being closed.
     case triggerAssertWithAnotherELF
+
+    // Triggers
+    // Assertion failed: PostgresConnection deinitialized before being closed.
     case triggerAssertWithELFAnd
+
+    // Passes tests
     case noAssertWithSingleELF
+
+    // Passes tests
     case noAssertWithoutUnwarp
+
+    // Passes tests
     case noAssertWithAsync
 }
 
@@ -57,7 +68,7 @@ final class AppTests: XCTestCase {
             XCTAssertEqual(count, 0)
         }
 
-        let variant = Variants.noAssertWithSingleELF
+        let variant = Variants.triggerAssertWithAnotherELF
 
         switch variant {
             case .triggerAssertWithAnotherELF:
