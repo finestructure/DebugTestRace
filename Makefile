@@ -5,7 +5,7 @@ db-up:
 		-e POSTGRES_PASSWORD=vapor_password \
 		-e PGDATA=/pgdata \
 		--tmpfs /pgdata:rw,noexec,nosuid,size=1024m \
-		-p 5432:5432 \
+		-p 5433:5432 \
 		-d \
 		postgres:13.5-alpine
 
